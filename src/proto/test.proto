@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package test.api.v1;
+
+option java_multiple_files = true;
+option java_package = "test.api.v1";
+
+message Outer {
+  
+  message Inner {
+  	string prop1 = 1;
+  }
+  
+  Inner prop1 = 1;
+  string prop2 = 2;
+  
+}
+
+message FlatInner {
+  	string prop1 = 1;
+}
+
+message FlatOuter {
+  FlatInner prop1 = 1;
+  string prop2 = 2;
+}
+
