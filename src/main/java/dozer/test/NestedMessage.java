@@ -42,4 +42,27 @@ public class NestedMessage
 			this.prop1 = prop1;
 		}
 	}
+	
+	public static class Colors {
+		public enum Color {
+			RED, BLUE, GREEN;
+		}
+		
+		private Color color;
+		
+		public Colors()
+		{
+			
+		}
+		
+		public Color getColor() {
+			return color;
+		}
+		
+		public void setColor(Color color) {
+			this.color = color;
+		}
+		
+		
+	}
 }

@@ -34,6 +34,11 @@ public final class Test {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_test_api_v1_FlatOuter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_test_api_v1_Colors_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_test_api_v1_Colors_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -48,7 +53,10 @@ public final class Test {
       "\022\r\n\005prop2\030\002 \001(\t\032\026\n\005Inner\022\r\n\005prop1\030\001 \001(\t\"" +
       "\032\n\tFlatInner\022\r\n\005prop1\030\001 \001(\t\"A\n\tFlatOuter" +
       "\022%\n\005prop1\030\001 \001(\0132\026.test.api.v1.FlatInner\022" +
-      "\r\n\005prop2\030\002 \001(\tB\017\n\013test.api.v1P\001b\006proto3"
+      "\r\n\005prop2\030\002 \001(\t\"Y\n\006Colors\022(\n\005color\030\001 \001(\0162" +
+      "\031.test.api.v1.Colors.Color\"%\n\005Color\022\007\n\003r" +
+      "ed\020\000\022\010\n\004blue\020\001\022\t\n\005green\020\002B\017\n\013test.api.v1" +
+      "P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -86,6 +94,12 @@ public final class Test {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_test_api_v1_FlatOuter_descriptor,
         new java.lang.String[] { "Prop1", "Prop2", });
+    internal_static_test_api_v1_Colors_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_test_api_v1_Colors_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_test_api_v1_Colors_descriptor,
+        new java.lang.String[] { "Color", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

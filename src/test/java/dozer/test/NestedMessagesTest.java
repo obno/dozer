@@ -6,6 +6,8 @@ import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 import com.github.dozermapper.core.loader.api.BeanMappingBuilder;
 
+import dozer.test.NestedMessage.Colors;
+import dozer.test.NestedMessage.Colors.Color;
 import dozer.test.NestedMessage.Inner;
 import dozer.test.NestedMessage.Outer;
 
@@ -67,6 +69,32 @@ public class NestedMessagesTest
 		o.setProp2("1");
 		
 		mapper.map(o, test.api.v1.FlatOuter.class);
+		
+	}
+	
+	@Test
+	public void testNestedEnum()
+	{
+		Mapper mapper = DozerBeanMapperBuilder.create().withMappingBuilders(
+				
+				new BeanMappingBuilder() {
+
+					@Override
+					protected void configure() {
+						
+						mapping(Color.class, test.api.v1.Colors.Color.class);
+						mapping(Colors.class, test.api.v1.Colors.class);
+						
+					}
+					
+				}
+				
+		).build();
+		
+		Colors c = new Colors();
+		c.setColor(Color.BLUE);
+		
+		mapper.map(c, test.api.v1.Colors.class);
 		
 	}
 }
